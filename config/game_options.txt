@@ -76,15 +76,15 @@ ALERT_DELTA Destruction of the station is imminent. All crew are instructed to o
 ## Default probablity is 1, increase to make that mode more likely to be picked.
 ## Set to 0 to disable that mode.
 
-PROBABILITY TRAITOR 5
-PROBABILITY TRAITORBRO 2
-PROBABILITY TRAITORCHAN 4
-PROBABILITY INTERNAL_AFFAIRS 3
+PROBABILITY TRAITOR 4
+PROBABILITY TRAITORBRO 0
+PROBABILITY TRAITORCHAN 0
+PROBABILITY INTERNAL_AFFAIRS 0
 PROBABILITY NUCLEAR 2
-PROBABILITY REVOLUTION 2
-PROBABILITY CULT 2
+PROBABILITY REVOLUTION 0
+PROBABILITY CULT 0
 PROBABILITY CHANGELING 2
-PROBABILITY WIZARD 4
+PROBABILITY WIZARD 0
 PROBABILITY MONKEY 0
 PROBABILITY METEOR 0
 PROBABILITY EXTENDED 0
@@ -152,7 +152,7 @@ MIDROUND_ANTAG WIZARD
 #MIN_POP TRAITORCHAN 15
 #MAX_POP TRAITORCHAN -1
 
-#MIN_POP DOUBLE_AGENTS 25
+#MIN_POP DOUBLE_AGENTS 4
 #MAX_POP DOUBLE_AGENTS -1
 
 #MIN_POP NUCLEAR 0
@@ -167,7 +167,7 @@ MIDROUND_ANTAG WIZARD
 #MIN_POP CLOCKWORK_CULT 24
 #MAX_POP CLOCKWORK_CULT -1
 
-#MIN_POP CHANGELING 15
+#MIN_POP CHANGELING 0
 #MAX_POP CHANGELING -1
 
 #MIN_POP WIZARD 20
@@ -186,7 +186,7 @@ MIDROUND_ANTAG WIZARD
 #MAX_POP DEVIL_AGENTS -1
 
 ## Setting at least one mode to be playable at 0/1 players is required.
-#MIN_POP EXTENDED 0
+#MIN_POP EXTENDED 100
 #MAX_POP EXTENDED -1
 
 
@@ -197,9 +197,9 @@ SHUTTLE_REFUEL_DELAY 12000
 ## Variables calculate how number of antagonists will scale to population.
 ## Used as (Antagonists = Population / Coeff)
 ## Set to 0 to disable scaling and use default numbers instead.
-TRAITOR_SCALING_COEFF 6
-BROTHER_SCALING_COEFF 6
-CHANGELING_SCALING_COEFF 6
+TRAITOR_SCALING_COEFF 3
+BROTHER_SCALING_COEFF 3
+CHANGELING_SCALING_COEFF 3
 
 ## Variables calculate how number of open security officer positions will scale to population.
 ## Used as (Officers = Population / Coeff)
@@ -208,7 +208,7 @@ SECURITY_SCALING_COEFF 8
 
 ## The number of objectives traitors get.
 ## Not including escaping/hijacking.
-TRAITOR_OBJECTIVES_AMOUNT 2
+TRAITOR_OBJECTIVES_AMOUNT 1
 BROTHER_OBJECTIVES_AMOUNT 2
 
 ## Uncomment to prohibit jobs that start with loyalty
@@ -248,11 +248,11 @@ ALLOW_RANDOM_EVENTS
 
 ## Multiplier for earliest start time of dangerous events.
 ## Set to 0 to make dangerous events avaliable from round start.
-EVENTS_MIN_TIME_MUL 1
+EVENTS_MIN_TIME_MUL 0
 
 ## Multiplier for minimal player count (players = alive non-AFK humans) for dangerous events to start.
 ## Set to 0 to make dangerous events avaliable for all populations.
-EVENTS_MIN_PLAYERS_MUL 1
+EVENTS_MIN_PLAYERS_MUL 0
 
 
 ## AI ###
@@ -406,8 +406,8 @@ ROUNDSTART_RACES human
 
 ## Races that are strictly worse than humans that could probably be turned on without balance concerns
 ROUNDSTART_RACES lizard
-#ROUNDSTART_RACES fly
-#ROUNDSTART_RACES moth
+ROUNDSTART_RACES fly
+ROUNDSTART_RACES moth
 ROUNDSTART_RACES plasmaman
 #ROUNDSTART_RACES shadow
 
@@ -523,7 +523,7 @@ ROUNDSTART_TRAITS
 #ENABLE_NIGHT_SHIFTS
 
 ## Enable randomized shift start times##
-#RANDOMIZE_SHIFT_TIME
+RANDOMIZE_SHIFT_TIME
 
 ## Sets shift time to server time at roundstart. Overridden by RANDOMIZE_SHIFT_TIME ##
 #SHIFT_TIME_REALTIME
