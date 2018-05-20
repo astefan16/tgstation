@@ -268,15 +268,14 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	item = /obj/item/melee/transforming/energy/sword/bananium
 	cost = 3
 	surplus = 0
-	include_modes = list(/datum/game_mode/nuclear/clown_ops)
+	restricted_roles = list("Clown")
 
 /datum/uplink_item/dangerous/doublesword
 	name = "Double-Bladed Energy Sword"
 	desc = "The double-bladed energy sword does slightly more damage than a standard energy sword and will deflect \
 			all energy projectiles, but requires two hands to wield."
 	item = /obj/item/twohanded/dualsaber
-	player_minimum = 25
-	cost = 16
+	cost = 18
 	exclude_modes = list(/datum/game_mode/nuclear/clown_ops)
 
 /datum/uplink_item/dangerous/doublesword/get_discount()
@@ -699,7 +698,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	name = "Romerol"
 	desc = "A highly experimental bioterror agent which creates dormant nodules to be etched into the grey matter of the brain. On death, these nodules take control of the dead body, causing limited revivification, along with slurred speech, aggression, and the ability to infect others with this agent."
 	item = /obj/item/storage/box/syndie_kit/romerol
-	cost = 25
+	cost = 20
 	cant_discount = TRUE
 	exclude_modes = list(/datum/game_mode/nuclear)
 
@@ -784,7 +783,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	item = /obj/item/clothing/shoes/clown_shoes/banana_shoes/combat
 	cost = 6
 	surplus = 0
-	include_modes = list(/datum/game_mode/nuclear/clown_ops)
+	restricted_roles = list("Clown")
 
 /datum/uplink_item/stealthy_tools/frame
 	name = "F.R.A.M.E. PDA Cartridge"
